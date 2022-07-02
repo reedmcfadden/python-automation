@@ -16,9 +16,13 @@ def get_driver():
     return driver
 
 
+def get_aristotle_quote(driver):
+    return driver.find_element(by="xpath", value="/html/body/div[1]/div/h1[1]")
+
+
 def main():
     driver = get_driver()
-    element = driver.find_element(by="xpath", value="/html/body/div[1]/div/h1[1]")
+    element = get_aristotle_quote(driver)
     return element.text
 
 
