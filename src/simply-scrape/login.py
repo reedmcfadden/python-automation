@@ -31,10 +31,19 @@ def click_home_button(driver):
     driver.find_element(by="xpath", value="/html/body/nav/div/a").click()
 
 
+def get_world_temperature(driver):
+    """ Get the temperature from the text, contained in the last characters of the string """
+    time.sleep(2)
+    element = driver.find_element(by="xpath", value='//*[@id="displaytimer"]')
+    world_temp = element.text.split(": ")[1]
+    return world_temp 
+
+
 def main():
     driver = get_driver()
     login(driver)
     click_home_button(driver)
+    print(get_world_temperature(driver))
 
 
 if __name__ == '__main__':
