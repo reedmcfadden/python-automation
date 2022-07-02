@@ -18,7 +18,7 @@ pwd = "automatedautomated"
 def get_driver():
     opts = Options()
     driver = webdriver.Firefox(options=opts)
-    driver.get("http://automated.pythonanywhere.com/login/")
+    driver.get(loginSite)
     return driver
 
 
