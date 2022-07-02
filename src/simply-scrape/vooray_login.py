@@ -29,7 +29,6 @@ def login(driver):
     
 def click_contact_button(driver):
     time.sleep(2)  # wait for button to be available. could be done w/ waits
-    # todo update with actual vooray contact button
     driver.find_element(by="xpath", value="/html/body/div[6]/div/footer/div[1]/div/div[2]/div/ul/li[2]/a").click()
 
 
